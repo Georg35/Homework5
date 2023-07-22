@@ -14,7 +14,9 @@ public class Main {
     public static void task1() {
         System.out.println("Задача 1");
         int operatingSystem = 0;
-        if (operatingSystem == 0) {
+        int iOS = 0;
+        int android = 1;
+        if (operatingSystem == iOS) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else {
             System.out.println("Установите версию приложения для Android по ссылке");
@@ -23,16 +25,19 @@ public class Main {
 
     public static void task2() {
         System.out.println("Задача 2");
-        int operatingSystem = 0;
-        int clientDeviceYear = 2019;
-        if (operatingSystem == 0 && clientDeviceYear < 2015) {
+        int operatingSystem = 1;
+        int iOS = 0;
+        int android = 1;
+        int checkYear = 2015;
+        int clientDeviceYear = 2010;
+        if (operatingSystem == iOS && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (operatingSystem == 0 && clientDeviceYear > 2015) {
+        } else if (operatingSystem == iOS && clientDeviceYear > checkYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        if (operatingSystem == 1 && clientDeviceYear > 2015) {
+        if (operatingSystem == android && clientDeviceYear > checkYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (operatingSystem == 1 && clientDeviceYear < 2015) {
+        } else if (operatingSystem == android && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
     }
